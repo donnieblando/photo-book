@@ -6,6 +6,7 @@ import './App.scss';
 import LandingPage from './containers/LandingPage';
 import ProjectsPage from './containers/ProjectsPage';
 import AboutPage from './containers/AboutPage';
+import Generator from './containers/Generator';
 
 class App extends Component {
   render() {
@@ -16,6 +17,8 @@ class App extends Component {
           <Route exact path="/" component={LandingPage} />
           <Route path="*/about" component={AboutPage} />
           <Route path="*/projects/:project" component={ProjectsPage} />
+
+          <Route path="*/generator" component={Generator} />
         </Switch>
       </BrowserRouter>
       
