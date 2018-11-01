@@ -2,12 +2,12 @@ import React from 'react';
 
 import LayoutPage from '../LayoutPage/LayoutPage';
 
-const LandingPage = () => (
-  <div>
+const ContactsPage = props => {
+  return (
     <LayoutPage>
-      <h2>Landing Page</h2>
+      <h2>Contacts Page</h2>
     </LayoutPage>
-  </div>
-);
+  );
+}
 
-export default LandingPage;
+export default ContactsPage;

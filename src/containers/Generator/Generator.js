@@ -1,6 +1,11 @@
 import React, { Component }  from 'react';
 import PropTypes from 'prop-types';
 
+import './_Generator.scss';
+
+import LayoutPage from '../LayoutPage/LayoutPage';
+
+
 class Generator extends Component {
 
   constructor(props) {
@@ -18,7 +23,6 @@ class Generator extends Component {
   }
 
   changeInputValue(e) {
-    console.log('changeInputValue', e.target.name, e.target.value);
     this.setState({
       [e.target.name]: e.target.value
     });
@@ -38,6 +42,7 @@ class Generator extends Component {
   generateImports() {
     return `import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+
 `;
   }
 
@@ -56,7 +61,9 @@ import PropTypes from 'prop-types';
   render() {
 
     return (
-
+      <div className="${this.state.name}">
+      
+      </div>
     );
   }
 
@@ -71,7 +78,9 @@ export default ${this.state.name};`
 `const ${this.state.name} = (props) => {
 
   return (
-
+    <div className="${this.state.name}">
+      
+    </div>
   );
   
 }
@@ -87,32 +96,31 @@ export default ${this.state.name};`
   }
 
   render() {
-
-    console.log('state', this.state);
-
     return (
-      <div className="p-1">
-        <div>
-          <input type="text" placeholder="name" name="name" onChange={this.changeInputValue} />
-          <input type="checkbox" name="isComponent" onChange={this.toggleIsComponent} />
-        </div>
-        <div>
-          <button title="generate" type="submit" onClick={this.generate}>
-            GENERATE!
-          </button>
-        </div>
-        <br />
-        <br />
-        {this.state.name && 
+      <LayoutPage>
+        <div className="p-1 text-left">
           <div>
-            <span className="generator">
-              {this.generateImports()}
-              {this.generateCore()}
-            </span>
+            <input type="text" placeholder="name" name="name" onChange={this.changeInputValue} />
+            <input type="checkbox" name="isComponent" onChange={this.toggleIsComponent} />
           </div>
-        }
-      </div>
-    )
+          <div>
+            <button title="generate" type="submit" onClick={this.generate}>
+              GENERATE!
+            </button>
+          </div>
+          <br />
+          <br />
+          {this.state.name && 
+            <div>
+              <span className="generator text-left">
+                {this.generateImports()}
+                {this.generateCore()}
+              </span>
+            </div>
+          }
+        </div>
+      </LayoutPage>
+    );
   }
   
 }

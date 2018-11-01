@@ -1,0 +1,16 @@
+@import '../../assets/scss/_variables.scss';
+
+div.footer {
+  width: 100%;
+  margin: 0 auto;
+  height: 50px;
+  position: relative;
+  background-color: $grey-dark;
+  
+  div.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+    color: $grey-white;
+    height: 100%;
+  }
+}
