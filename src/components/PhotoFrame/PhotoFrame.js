@@ -3,15 +3,15 @@ import PropTypes from 'prop-types';
 
 import './_PhotoFrame.scss';
 
-import Photo from '../Photo';
+import PhotoResponsive from '../PhotoResponsive';
 
 const PhotoFrame = props => {
 
   return (
     <div className="photo-frame">
-      <Photo 
+      <PhotoResponsive 
         baseName={props.photoBaseName}
-      />      
+      />
     </div>
   );
   

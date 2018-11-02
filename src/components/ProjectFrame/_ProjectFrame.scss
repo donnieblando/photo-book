@@ -1,0 +1,11 @@
+@import '../../assets/scss/_variables.scss';
+
+div.ProjectFrame {
+
+  padding: 5px;
+  background-color: $grey-dark;
+
+  img {
+    width: 100%;
+  }
+}

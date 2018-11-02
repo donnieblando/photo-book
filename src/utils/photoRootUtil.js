@@ -1,7 +1,7 @@
 const PHOTO_ROOTS = {
-  SM: '/photos/small/',
-  MD: '/photos/medium/',
-  LG: '/photos/large/'
+  SM: '/photos/sizes/small/',
+  MD: '/photos/sizes/medium/',
+  LG: '/photos/sizes/large/'
 };
 
 export function buildSrcSet(baseName, extension, sizes) {

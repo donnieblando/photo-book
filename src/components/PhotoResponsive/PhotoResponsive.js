@@ -5,7 +5,7 @@ import { IMG_EXTENSIONS } from '../../utils/constants';
 
 import { buildSrcSet } from '../../utils/photoRootUtil';
 
-const Photo = props => {
+const PhotoResponsive = props => {
 
   const srcSet = buildSrcSet(
     props.baseName,
@@ -13,21 +13,21 @@ const Photo = props => {
     [480, 1200, 800]
   );
 
-  console.log('srcset', srcSet);
+  console.log('PhotoResponsive', srcSet);
 
   return (
     <img
         srcSet={srcSet}
-        sizes="(min-width: 850px) and (max-width: 1199px) 800w,
-               (max-width: 849px) 500w,
+        sizes="(max-width: 849px) 500w,
+               (min-width: 850px) and (max-width: 1199px) 800w,
                (min-width: 1200px) 1100w"
       />
   );
   
 }
 
-Photo.propTypes = {
+PhotoResponsive.propTypes = {
   baseName: PropTypes.string
 };
 
-export default Photo;
+export default PhotoResponsive;
