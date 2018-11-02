@@ -3,18 +3,22 @@ import PropTypes from 'prop-types';
 
 import './_PhotoFrame.scss';
 
-const PhotoFrame = (props) => {
+import Photo from '../Photo';
+
+const PhotoFrame = props => {
 
   return (
     <div className="photo-frame">
-      
+      <Photo 
+        baseName={props.photoBaseName}
+      />      
     </div>
   );
   
 }
 
 PhotoFrame.propTypes = {
-
+  photoBaseName: PropTypes.string.isRequired
 };
 
 export default PhotoFrame;

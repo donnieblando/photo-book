@@ -2,10 +2,12 @@ import React from 'react';
 
 import LayoutPage from '../LayoutPage/LayoutPage';
 
-const ProjectsPage = props => {
+const ProjectsPage = () => {
+  console.log('ProjectsPage')
   return (
     <LayoutPage>
-      <h2>Projects Page - Selected the project {props.match.params.project}</h2>
+      <h2>Projects Page</h2>
+      
     </LayoutPage>
   );
 }

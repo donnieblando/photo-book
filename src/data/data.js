@@ -4,15 +4,14 @@ export const MENU_ITEMS = [
     path: '/'
   },{
     label: 'Projects',
-    path: '/projects/xxx'
+    path: '/projects'
   },{
     label: 'About',
     path: '/about'
   },{
     label: 'Contacts',
     path: '/contacts'
-  },
-  {
+  },{
     label: 'GENERATOR',
     path: '/generator'
   }
