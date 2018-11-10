@@ -6,7 +6,7 @@ import './Module.scss';
 const Module = props => {
 
   return (
-    <div className="module p-4">
+    <div className="module p-1 p-md-4">
       {props.children}
     </div>
   );

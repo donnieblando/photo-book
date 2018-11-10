@@ -7,10 +7,13 @@ import PhotoResponsive from '../PhotoResponsive';
 
 const PhotoFrame = props => {
 
+  const orientationCls = props.vertical ? 'vertical' : 'horizontal';
+
   return (
-    <div className="photo-frame">
+    <div className={`photo-frame ${orientationCls}`}>
       <PhotoResponsive 
         baseName={props.photoBaseName}
+        vertical={props.vertical}
       />
     </div>
   );
@@ -18,7 +21,8 @@ const PhotoFrame = props => {
 }
 
 PhotoFrame.propTypes = {
-  photoBaseName: PropTypes.string.isRequired
+  photoBaseName: PropTypes.string.isRequired,
+  vertical: PropTypes.bool
 };
 
 export default PhotoFrame;

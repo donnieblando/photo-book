@@ -5,7 +5,11 @@ div.photo-frame {
   padding: 10px;
   background-color: $grey-dark;
 
-  img {
+  img.horizontal {
     width: 100%;
+  }
+
+  img.vertical {
+    height: 100%;
   }
 }
