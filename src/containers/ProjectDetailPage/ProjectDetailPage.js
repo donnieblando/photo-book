@@ -12,6 +12,7 @@ const ProjectDetailPage = props => {
       
       
       <div className="row no-gutters mt-2">
+        
         <div className="col-12 col-md-6">
           <Module>
             <PhotoFrame photoBaseName="DSC_2804-1" />
@@ -20,11 +21,6 @@ const ProjectDetailPage = props => {
 
         <div className="col-12 col-md-6">
 
-          <Module>
-            <PhotoFrame photoBaseName="DSC_2804-1" />
-          </Module>
-          </div>
-          <div className="col-12 col-md-6">
           <Module>
             <PhotoFrame photoBaseName="DSC_2804-1" />
           </Module>
@@ -39,6 +35,12 @@ const ProjectDetailPage = props => {
             <PhotoFrame photoBaseName="DSC_6078" vertical />
           </Module>
         </div>
+          <div className="col-12 col-md-6">
+          <Module>
+            <PhotoFrame photoBaseName="DSC_2804-1" />
+          </Module>
+          </div>
+          
       </div>
 
 

@@ -19,37 +19,8 @@ div.module {
     height: auto;
     width: 100%;
 
-    div.photo-frame {
-      position: relative;
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none;
-    }
   }
 
-  div.photo-frame.horizontal {
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    @include phone {
-      -webkit-transform: none;
-      -ms-transform: none;
-      transform: none;
-    }
-
-  }
-
-  div.photo-frame.vertical {
-    margin: 0 auto;
-    height: 100%;
-    width: fit-content;
-
-    @include phone {
-      
-    }
-  }
+  
 
 }

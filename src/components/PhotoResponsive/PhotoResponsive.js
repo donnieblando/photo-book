@@ -6,16 +6,11 @@ import { buildSrcSet } from '../../utils/photoRootUtil';
 
 const PhotoResponsive = props => {
 
-  const srcSet = props.vertical ?
+  const srcSet = 
     buildSrcSet(
       props.baseName,
       IMG_EXTENSIONS.JPG,
-      [800, 533, 319]
-    ) :
-    buildSrcSet(
-      props.baseName,
-      IMG_EXTENSIONS.JPG,
-      [480, 1200, 800]
+      props.vertical
     );
     
 
