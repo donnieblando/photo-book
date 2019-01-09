@@ -29,3 +29,8 @@ export const SIZES = {
   }
 };
 
+export const PROJECT_IDS = {
+  PORTRAITS: "PORTRAITS",
+  LIVEMUSIC: "LIVEMUSIC",
+  BENCHES: "BENCHES"
+}
