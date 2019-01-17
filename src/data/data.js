@@ -1,4 +1,5 @@
 import { PROJECT_IDS } from "../utils/constants";
+import { LIVEMUSIC_PHOTOS, BENCHES_PHOTOS, PORTRAITS_PHOTOS } from './projectPhotos';
 
 export const MENU_ITEMS = [
   {
@@ -29,7 +30,7 @@ export const PROJECTS = {
     id: PROJECT_IDS.LIVEMUSIC,
     title: 'Gigs and stage animals',
     description: 'This project is meant to depict the human behavior when the subject is exposed on a stage for the pleasure of the audience',
-    photos: LIVE_MUSIC_PHOTOS
+    photos: LIVEMUSIC_PHOTOS
   },
   BENCHES: {
     id: PROJECT_IDS.BENCHES,

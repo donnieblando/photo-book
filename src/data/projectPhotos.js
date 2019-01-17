@@ -1,5 +1,5 @@
 
-const LIVE_MUSIC_PHOTOS = [
+const LIVEMUSIC_PHOTOS = [
   [{}, {}],
   [],
   []
@@ -13,7 +13,7 @@ const PORTRAITS_PHOTOS = [
 ];
 
 export {
-  LIVE_MUSIC_PHOTOS,
+  LIVEMUSIC_PHOTOS,
   BENCHES_PHOTOS,
   PORTRAITS_PHOTOS
 }
