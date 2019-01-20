@@ -2,17 +2,39 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { IMG_EXTENSIONS } from '../../utils/constants';
-import { buildSrcSet } from '../../utils/photoRootUtil';
+import { buildSrcSet, buildSrcSetGeneric } from '../../utils/photoRootUtil';
 
 const PhotoResponsive = props => {
 
-  const srcSet = 
-    buildSrcSet(
-      props.baseName,
-      IMG_EXTENSIONS.JPG,
-      props.vertical
-    );
-    
+  if (!props.baseName) {
+    return null;
+  }
+
+  let fileName = props.baseName;
+  let isVertical = props.vertical || fileName.charAt(0) === 'V';
+
+  let orientationCls = 'horizontal';
+  if (isVertical) {
+    orientationCls = 'vertical';
+    if (fileName.charAt(0) === 'V') {
+      fileName = fileName.substring(1);
+    }
+  }
+
+  let srcSet = '';
+  if (fileName) {
+    srcSet = isVertical ?
+      buildSrcSet(
+        fileName,
+        IMG_EXTENSIONS.JPG,
+        [400, 600, 800]
+      ) :
+      buildSrcSet(
+        fileName,
+        IMG_EXTENSIONS.JPG,
+        [1024, 640, 320]
+      );
+  }
 
   /**
    * <img
@@ -23,8 +45,7 @@ const PhotoResponsive = props => {
       />
    */
 
-  const orientationCls = props.vertical ? 'vertical' : 'horizontal';
-
+  
   return (
     <img
       className={orientationCls}

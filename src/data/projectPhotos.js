@@ -9,7 +9,13 @@ const BENCHES_PHOTOS = [
   []
 ];
 const PORTRAITS_PHOTOS = [
-  []
+  ["DSC_5801-1", "DSC_5816-1"],
+  ["DSC_5801-1", "VDSC_6078"],
+  ["DSC_5801-1"],
+  [null, "DSC_5801-1"],
+  [null, "DSC_5801-1", "DSC_5801-1", "DSC_5801-1"]
+  //["DSC_5801-1", "DSC_5816-1", "DSC_6078"]
+  //[null, "DSC_6078"]
 ];
 
 export {
@@ -25,5 +31,6 @@ export {
  *  title: string (opt)
  *  description: string (opt)
  *  caption: string (opt)
+ *  tags
  * }
  */

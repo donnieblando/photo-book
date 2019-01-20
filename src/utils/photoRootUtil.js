@@ -18,23 +18,23 @@ export function buildSrcSet(baseName, extension, sizes) {
   const sortedSizes = sizes.sort((a, b) => {
     return b - a;
   })
-  let result = `${PHOTO_ROOTS.LG}${baseName}-${String(sortedSizes[0])}w${extension} ${String(sortedSizes[0])}w`;
+  let result = `${PHOTO_ROOTS.LG}${baseName}_${String(sortedSizes[0])}${extension} ${String(sortedSizes[0])}w`;
   if (sortedSizes[1]) {
     result = result.concat(`,
-      ${PHOTO_ROOTS.MD}${baseName}-${String(sortedSizes[1])}w${extension} ${String(sortedSizes[1])}w`);
+      ${PHOTO_ROOTS.MD}${baseName}_${String(sortedSizes[1])}${extension} ${String(sortedSizes[1])}w`);
     if (sortedSizes[2]) {
       result = result.concat(`,
-        ${PHOTO_ROOTS.SM}${baseName}-${String(sortedSizes[2])}w${extension} ${String(sortedSizes[2])}w`);
+        ${PHOTO_ROOTS.SM}${baseName}_${String(sortedSizes[2])}${extension} ${String(sortedSizes[2])}w`);
     }
   }
-  console.log('result', result)
+  // console.log('buildSrcSet result', result)
   return result;
 }
 
 export function buildSrcSetGeneric(baseName, extension, vertical) {
   if (vertical)
-    return buildSrcSetVertical();
-  return buildSrcSetHorizontal();
+    return buildSrcSetVertical(baseName, extension);
+  return buildSrcSetHorizontal(baseName, extension);
 }
 
 export function buildSrcSetHorizontal(baseName, extension) {
