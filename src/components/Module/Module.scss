@@ -1,8 +1,8 @@
 @import '../../assets/scss/_variables.scss';
 
 div.module {
-  width: 580px;
-  height: 580px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 
   @include tablet {
@@ -18,9 +18,6 @@ div.module {
   @include phone {
     height: auto;
     width: 100%;
-
   }
-
-  
 
 }

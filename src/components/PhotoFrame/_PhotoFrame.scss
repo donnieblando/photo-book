@@ -13,11 +13,9 @@ div.photo-frame {
     height: 100%;
 
     img.vertical {
-      height: 100%;
-
-      @include phone {
-        
       width: 100%;
+      @include phone {
+        width: 100%;
       }
     }
   }
@@ -48,8 +46,7 @@ div.photo-frame.horizontal {
 
 div.photo-frame.vertical {
   margin: 0 auto;
-  height: 100%;
-  width: fit-content;
+  width: 70%;
 
   @include phone {
     width: auto;
