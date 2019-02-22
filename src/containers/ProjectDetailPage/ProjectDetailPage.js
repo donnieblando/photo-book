@@ -11,6 +11,10 @@ const ProjectDetailPage = props => {
 
   const rows = buildRows(matrix);
 
+  if (project) {
+    console.log('result', result);
+  }
+
   return (
     <LayoutPage>
       <h2>ProjectDetail Page - Selected the project {props.match.params.project}</h2>
