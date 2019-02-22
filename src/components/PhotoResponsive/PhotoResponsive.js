@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { IMG_EXTENSIONS } from '../../utils/constants';
-import { buildSrcSet, buildSrcSetGeneric, getRandomDelay } from '../../utils/photoRootUtil';
+import { buildSrcSet, buildSrcSetGeneric } from '../../utils/photoRootUtil';
+import { isVerticalOriented } from '../../utils/modular';
 
 const PhotoResponsive = props => {
 
@@ -11,12 +12,12 @@ const PhotoResponsive = props => {
   }
 
   let fileName = props.baseName;
-  let isVertical = props.vertical || fileName.charAt(0) === 'V';
+  let isVertical = props.vertical || isVerticalOriented(fileName);
 
   let orientationCls = 'horizontal';
   if (isVertical) {
     orientationCls = 'vertical';
-    if (fileName.charAt(0) === 'V') {
+    if (isVerticalOriented(fileName)) {
       fileName = fileName.substring(1);
     }
   }
@@ -44,7 +45,6 @@ const PhotoResponsive = props => {
                (min-width: 1200px) 1100w"
       />
    */
-  
   return (
     <img
       className={orientationCls}
