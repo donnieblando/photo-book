@@ -52,3 +52,7 @@ export function buildSrcSetHorizontal(baseName, extension) {
 export function buildSrcSetVertical(baseName, extension) {
   
 }
+
+export function getRandomDelay() {
+  return Math.random() * 5000;
+}

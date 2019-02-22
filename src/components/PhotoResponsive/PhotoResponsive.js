@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import { IMG_EXTENSIONS } from '../../utils/constants';
-import { buildSrcSet, buildSrcSetGeneric } from '../../utils/photoRootUtil';
+import { buildSrcSet, buildSrcSetGeneric, getRandomDelay } from '../../utils/photoRootUtil';
 
 const PhotoResponsive = props => {
 
@@ -44,7 +44,6 @@ const PhotoResponsive = props => {
                (min-width: 1200px) 1100w"
       />
    */
-
   
   return (
     <img

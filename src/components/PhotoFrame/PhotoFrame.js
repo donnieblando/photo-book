@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import PhotoResponsive from '../PhotoResponsive';
+import { getRandomDelay } from '../../utils/photoRootUtil';
 
 import './_PhotoFrame.scss';
 
-import PhotoResponsive from '../PhotoResponsive';
+class PhotoFrame extends Component {
 
-const PhotoFrame = props => {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true
+    }
+  }
 
-  const orientationCls = props.vertical ? 'vertical' : 'horizontal';
+  render() {
 
-  return (
-    <div className={`photo-frame ${orientationCls}`}>
+    const photoResp = (
       <PhotoResponsive 
-        baseName={props.photoBaseName}
-        vertical={props.vertical}
+        baseName={this.props.photoBaseName}
+        vertical={this.props.vertical}
       />
-    </div>
-  );
+    )
+    
+    const orientationCls = this.props.vertical ? 'vertical' : 'horizontal';
+    const result = photoResp;
+  
+    return (
+      <div className={`photo-frame ${orientationCls}`}>
+        {result}
+      </div>
+    );
+  }
   
 }
 
