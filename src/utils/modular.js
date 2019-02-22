@@ -1,11 +1,13 @@
+import React from 'react';
+
 import Module from '../components/Module';
 import PhotoFrame from '../components/PhotoFrame';
 
-export function isVerticalOriented(fileName) {
+function isVerticalOriented(fileName) {
   return fileName && fileName.length && fileName.charAt(0).toUpperCase() === 'V';
 }
 
-const buildRows = () => {
+const buildRows = (matrix) => {
   return matrix.map((mRow, key) => buildRow(mRow, key));
 }
 
