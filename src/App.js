@@ -38,6 +38,10 @@ class App extends Component {
             path="*/projects/livemusic"
             render={() => <ProjectDetailPage project={PROJECT_IDS.LIVEMUSIC} />}
           />
+          <Route
+            path="*/projects/lamina"
+            render={() => <ProjectDetailPage project={PROJECT_IDS.LAMINA} />}
+          />
 
           <Route path="*/generator" component={Generator} />
         </Switch>

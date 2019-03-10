@@ -1,5 +1,5 @@
 import { PROJECT_IDS } from "../utils/constants";
-import { LIVEMUSIC_PHOTOS, BENCHES_PHOTOS, PORTRAITS_PHOTOS } from './projectPhotos';
+import { LIVEMUSIC_PHOTOS, BENCHES_PHOTOS, PORTRAITS_PHOTOS, LAMINA_PHOTOS } from './projectPhotos';
 
 export const MENU_ITEMS = [
   {
@@ -30,19 +30,29 @@ export const PROJECTS = {
     id: PROJECT_IDS.LIVEMUSIC,
     title: 'Gigs and stage animals',
     description: 'This project is meant to depict the human behavior when the subject is exposed on a stage for the pleasure of the audience',
-    photos: LIVEMUSIC_PHOTOS
+    photos: LIVEMUSIC_PHOTOS,
+    preview: ""
   },
   BENCHES: {
     id: PROJECT_IDS.BENCHES,
     title: 'Amazing views with an invitation to sit and enjoy the show',
     description: 'This project is an homenaje to mother nature and her lovers',
-    photos: BENCHES_PHOTOS
+    photos: BENCHES_PHOTOS,
+    preview: ""
   },
   PORTRAITS: {
     id: PROJECT_IDS.PORTRAITS,
     title: 'Portraits',
     description: 'A deep inside look through the souls of the people ',
-    photos: PORTRAITS_PHOTOS
+    photos: PORTRAITS_PHOTOS,
+    preview: "DSC_5816-1"
+  },
+  LAMINA: {
+    id: PROJECT_IDS.LAMINA,
+    title: 'La Mina',
+    description: 'A special district in the city of Barcelona',
+    photos: LAMINA_PHOTOS,
+    preview: "DSC_5816-1"
   }
 }
 

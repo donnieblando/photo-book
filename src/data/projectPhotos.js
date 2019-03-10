@@ -16,10 +16,18 @@ const PORTRAITS_PHOTOS = [
   ["DSC_5801-1", "DSC_5801-1", null, "DSC_5801-1"]
 ];
 
+const LAMINA_PHOTOS = [
+  ["DSC_8464-1"],
+  ["DSC_8466-2", "DSC_8469-3"],
+  ["DSC_8473-4"],
+  ["DSC_8474-5"]
+];
+
 export {
   LIVEMUSIC_PHOTOS,
   BENCHES_PHOTOS,
-  PORTRAITS_PHOTOS
+  PORTRAITS_PHOTOS,
+  LAMINA_PHOTOS
 }
 
 /**
