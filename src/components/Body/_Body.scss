@@ -1,0 +1,14 @@
+div.body {
+  flex-grow: 5;
+  
+  width: 100%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+
+  div.my-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
