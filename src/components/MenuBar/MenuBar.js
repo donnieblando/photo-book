@@ -5,7 +5,7 @@ import './_MenuBar.scss';
 
 import MenuItem from './MenuItem';
 
-import { MENU_ITEMS } from '../../data/data';
+import { MENU_ITEMS } from '../../data/content';
 
 const generateMenuBar = () => {
   return MENU_ITEMS.map((item, key) =>

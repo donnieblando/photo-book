@@ -9,7 +9,7 @@ const BENCHES_PHOTOS = [
   []
 ];
 const PORTRAITS_PHOTOS = [
-  ["DSC_5801-1", "DSC_5816-1"],
+  ["DSC_5801-1", "DSC_5801-1", "VDSC_6078", "DSC_5816-1"],
   ["DSC_5801-1", "VDSC_6078"],
   ["DSC_5801-1"],
   [null, "DSC_5801-1"],

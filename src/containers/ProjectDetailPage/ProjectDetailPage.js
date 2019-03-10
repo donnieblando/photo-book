@@ -1,6 +1,6 @@
 import React from 'react';
 import LayoutPage from '../LayoutPage/LayoutPage';
-import { PROJECTS } from '../../data/data';
+import { PROJECTS } from '../../data/content';
 import { buildRows } from '../../utils/modular';
 
 const ProjectDetailPage = props => {
