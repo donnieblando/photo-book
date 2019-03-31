@@ -2,11 +2,15 @@
 
 div.photo-frame {
 
-  padding: 5px;
-  background-color: $grey-dark;
+  padding: 0px;
+  // background-color: $grey-dark;
 
-  img.horizontal {
-    width: 100%;
+  img {
+    border: 3px solid $grey-dark;
+
+    &.horizontal {
+      width: 100%;
+    }
   }
 
   &.vertical {
@@ -14,34 +18,12 @@ div.photo-frame {
 
     img.vertical {
       width: 100%;
+    
       @include phone {
         width: 100%;
       }
     }
   }
-
-  @include phone {
-    position: relative;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-
-}
-
-div.photo-frame.horizontal {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-
-  @include phone {
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-
 }
 
 div.photo-frame.vertical {

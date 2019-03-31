@@ -9,9 +9,9 @@ const LayoutPage = props => {
 
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header">
         <h1>DONNIE BLANDO PHOTOGRAPHER</h1>
-      </header>
+      </header> */}
       <MenuBar />
       <Body>
         {props.children}
